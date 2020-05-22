@@ -1,0 +1,29 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+     Scanner sc  = new Scanner(System.in);
+     int t = sc.nextInt();
+     while(t-->0){
+         long n = sc.nextLong();
+         long k = sc.nextLong();
+         
+         for(long i =1;i<k;++i){
+             long max = 0;
+             long min = 10;
+             
+             long temp = n;
+             while(n!=0){
+                 long rem = n%10;
+                 max = Math.max(max,rem);
+                 min = Math.min(min,rem);
+                 n= n/10;
+             }
+             n= temp +(max*min);
+             if(min==0){
+                 break;
+             }
+         }
+         System.out.println(n);
+     }
+    }
+}
