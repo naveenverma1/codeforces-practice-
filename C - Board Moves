@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class HelloWorld{
+
+     public static void main(String []args){
+      Scanner sc = new Scanner(System.in);
+      long t = sc.nextInt(); 
+      while(t-->0){
+          long sum=0;
+          long n = sc.nextInt();
+          long v=8;
+         
+          for(int i= 1;i<=n/2;i++){
+              sum+=i*v;
+              v+=8;
+          }
+           System.out.println(sum);
+      }
+     
+     }
+}
