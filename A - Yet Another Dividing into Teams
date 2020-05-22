@@ -1,0 +1,44 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class NewClass {
+    
+
+    public static void main(String[] args) {
+         //int cnt=1;
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        
+       
+        while(x-->0){
+          int  t = sc.nextInt();
+            boolean conflicto = false;
+             int[] arr = new int[t];
+            for(int i = 0;i<arr.length;i++){
+                arr[i] = sc.nextInt();
+            }
+           Arrays.sort(arr);
+            for(int i = 0;i<arr.length-1 && !conflicto ;i++){
+               
+                    if((arr[i]-arr[i+1]) == -1 ){
+                        conflicto = true;
+                        //continue;
+                        
+                    }}
+                    if(conflicto){
+				System.out.println("2");
+			}
+			else{
+				System.out.println("1");
+			}
+                } 
+            
+     
+
+                            }
+           
+        }
+    
+
