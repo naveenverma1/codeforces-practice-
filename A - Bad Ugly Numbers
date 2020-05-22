@@ -1,0 +1,26 @@
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner  sc= new Scanner(System.in);
+     int n = sc.nextInt();
+      
+      while(n-->0){
+           int s = sc.nextInt();
+          if(s==1){
+         System.out.println(-1);
+         
+     }
+    
+    if (s>1){System.out.print(2);
+     for(int i = 1;i<s;++i){
+         System.out.print(3);
+        
+     } System.out.println();
+      }
+      
+	}
+	    
+	}
+}
