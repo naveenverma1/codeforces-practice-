@@ -1,0 +1,27 @@
+import java.util.*;
+ public class HelloWorld{
+
+     public static void main(String []args){
+       Scanner sc = new Scanner(System.in);
+       int t = sc.nextInt();
+       while(t-->0){
+            int  n = sc.nextInt();
+            
+           int r = n/2;
+           int s1=0;
+           int s2 =0;
+           	if(n==2){
+			System.out.println(2);}
+			else{
+           for(int i =r;i<=n-1;i++){
+               s1+=(long)Math.pow(2,i);
+           }
+           for(int i = 1;i<=r-1;i++){
+               s2+=(long)Math.pow(2,i);
+           }
+           s2+=(long)Math.pow(2,n);
+            System.out.println(s2-s1);
+       }}
+      
+     }
+}
