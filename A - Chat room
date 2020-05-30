@@ -1,0 +1,19 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+     Scanner sc= new Scanner(System.in);
+     
+ String a = sc.nextLine();
+      int h= a.indexOf('h');
+      int e= a.indexOf('e',h);
+      int l1=a.indexOf('l',e);
+      int l2=a.indexOf('l',l1+1);
+      int o=a.indexOf('o',l2);
+      if(h!=-1 && e!=-1 && l1!=-1 && l2!=-1 && o!=-1 && o>l2 && l2>l1 && l1>e && e>h) {
+    	  System.out.println("YES");
+  }
+      else {
+    	  System.out.println("NO");
+      }
+    }
+}
