@@ -1,0 +1,29 @@
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+Scanner sc = new Scanner(System.in);
+int t = sc.nextInt();
+while(t-->0){
+ int a = sc.nextInt();
+ int b = sc.nextInt();
+ int c = sc.nextInt();
+ int d = sc.nextInt();
+ int count  =0;
+ int min = Integer.MAX_VALUE;
+ for(int i =0;i<a;i++){
+     String s = sc.next();
+     for(int j =0;j<s.length();j++){
+         
+         if(j+1<=s.length()-1&&s.charAt(j)=='.'&& s.charAt(j+1)=='.'){
+             min= Math.min(2*c,d);
+             count+=min;
+             j++;
+         }else if(s.charAt(j)=='.'){
+             count+=c;
+         }
+     }
+ }
+ System.out.println(count);
+}
+    }
+}
