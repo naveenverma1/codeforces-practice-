@@ -1,0 +1,23 @@
+A - Johnny and Ancient Computer
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int T = in.nextInt();
+        for (int t = 0; t < T; t++) {
+            long a = in.nextLong(), b = in.nextLong();
+            long min = Math.min(a, b), max = Math.max(a, b);
+            int dist = 0;
+            while (min < max) {
+                min *= 2;
+                dist++;
+            }
+            if (min > max) {
+                System.out.println(-1);
+            } else {
+                System.out.println((int)Math.ceil(dist / 3.0));
+            }
+        }
+    }
+}
