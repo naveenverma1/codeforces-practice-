@@ -1,0 +1,27 @@
+B - Two-gram
+
+import java.util.*;
+public class MyClass {
+    public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+   int n = sc.nextInt();
+   String s = sc.next();
+   int count;
+   int max =0;
+   int index=0;
+   char[] c = s.toCharArray();
+   for(int i =0;i<n-1;i++){
+       count =0;
+       for(int j =0;j<n-1;j++){
+           if(c[i]==c[j]&&c[i+1]==c[j+1]){
+               count++;
+           }
+       }
+       if(count>max){
+           max = count;
+           index =i;
+       }
+   }
+  System.out.printf("%c%c",c[index],c[index+1]);
+    }
+}
