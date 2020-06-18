@@ -1,0 +1,39 @@
+A - XXXXX
+
+import java.util.*;
+public class two {
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int t = sc.nextInt();
+       while(t-->0){
+int n = sc.nextInt();
+int x =sc.nextInt();
+int len=Integer.MIN_VALUE;
+int a[] = new int[n];
+            int max=0;
+
+long sum=0;
+for(int i=0;i<n;i++){
+                a[i]=sc.nextInt();
+                sum+=a[i];
+                if(sum%x!=0)max=Math.max(max,i+1);
+            }
+            // // while(j<arr.length){
+//    sum+=arr[j++];
+//    if(sum%k!=0){
+//        len = Math.max(len,n-j);
+       
+//    }
+
+// }
+            sum=0;
+            for(int i=n-1;i>=0;i--){
+                sum+=a[i];
+                if(sum%x!=0)max=Math.max(max,n-i);
+            }
+            System.out.println(max!=0?max:-1);
+
+       }
+sc.close();
+       }
+}
