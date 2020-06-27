@@ -1,0 +1,28 @@
+B - 01 Game
+
+
+
+ import java.util.*;
+ public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new  Scanner(System.in);
+        int t = sc.nextInt();
+        while(t-->0){
+            String n = sc.next();
+           
+int count =0;
+for(int i =0;i<n.length();i++){
+    if(n.charAt(i)=='0'){
+        count++;
+    }
+}
+System.out.println(Math.min(count,n.length()-count) % 2 == 0 ? "NET" : "DA");
+   
+}
+
+    
+
+    }
+
+}
+    
