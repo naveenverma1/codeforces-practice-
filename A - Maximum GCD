@@ -1,0 +1,18 @@
+
+A - Maximum GCD
+
+import java.util.*;
+
+public class Main{
+     public static void main(String []args){
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        while(t-->0){
+            int max = s.nextInt();
+            if(max%2 == 0)
+                System.out.println(max/2);
+            else
+                System.out.println((max-1)/2);
+        }
+     }
+}
