@@ -1,0 +1,31 @@
+B - The Child and Set
+
+import java.util.*;
+import java.lang.*;
+public class Main{
+	public static void main(String args[])
+	{
+		Scanner in=new Scanner(System.in);
+		int sum=in.nextInt();
+		int limit=in.nextInt();
+		int mask=0,size=0;
+		StringBuffer sb=new StringBuffer();
+		for(int i=limit;i>0;i--)
+		{
+			int bit=Integer.lowestOneBit(i);
+			if(bit+mask<=sum)
+			{
+				size+=1;
+				mask+=bit;
+				sb.append(i + " ");
+			}
+		}
+		if(mask!=sum)
+			System.out.println(-1);
+		else
+		{
+			System.out.println(size);
+			System.out.println(sb);
+		}
+	}
+}
