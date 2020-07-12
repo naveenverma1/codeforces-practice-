@@ -41,7 +41,7 @@ int d = 1;
 			out.println(d + " " + (n - d));
 
 
-
+ 
 
        
     }
