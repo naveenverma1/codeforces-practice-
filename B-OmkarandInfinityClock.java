@@ -21,27 +21,27 @@ public class Main {
 
 class Naveen {
 
-    int n;
-    int[]  arr;
+    int n,k;
+    long[]  a;
     
 
     Naveen(FastScanner sc) {
     
          n = sc.nextInt();
-         arr = sc.arrayInt(n);
+         k = sc.nextInt();
+         a = sc.arrayLong(n);
     }
 
     void solve(PrintWriter out) {
-                                                                                                                                                                                                                                                                            
-  Set<Integer> set = new HashSet();
-  for(int i =0;i<arr.length;i++){
-      set.add(arr[i]);
-  }
-   out.println(set.size()==1?n:1);
-    
-
-
-  
+        long max = Integer.MIN_VALUE,min = Integer.MAX_VALUE;
+        for(int i=0;i<n;i++) {
+            //a[i] = in.nextInt();
+            max = Math.max(max, a[i]);
+            min = Math.min(min, a[i]);
+        }
+        if(k%2==1) for(int i=0;i<n;i++) out.print((max-a[i])+" ");
+        else for(int i=0;i<n;i++) out.print((a[i]-min)+" ");
+        out.println();
     }
 
    
