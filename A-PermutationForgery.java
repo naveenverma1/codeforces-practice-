@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         FastScanner sc = new FastScanner();
         PrintWriter out = new PrintWriter(System.out);
-        long t = sc.nextLong();
+        int t = sc.nextInt();
         while(t-->0){
         Naveen problem = new Naveen(sc);
             problem.solve(out);
@@ -21,20 +21,24 @@ public class Main {
 
 class Naveen {
 
-    long a,b;
-    //int[]  arr;
+    int n   ;
+    int[]  arr;
     
 
     Naveen(FastScanner sc) {
     
-         a = sc.nextLong();
-         b = sc.nextLong();
-       //  arr = sc.arrayInt(n);
+         n = sc.nextInt();
+      
+         
+         arr = sc.arrayInt(n);
     }
 
+    
     void solve(PrintWriter out) {
-  out.println((Math.abs(a-b)+9)/10);
-       
+     for(int i =n-1;i>=0;i--){
+         System.out.print(arr[i]+" ");
+     }
+     System.out.println();
     }
 
    
@@ -65,7 +69,7 @@ class FastScanner {
     }
 
     private int readByte() {
-        if (hasNextByte()) {        
+        if (hasNextByte()) {
             return buffer[ptr++];
         } else {
             return -1;
