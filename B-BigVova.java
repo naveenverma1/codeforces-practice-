@@ -33,13 +33,39 @@ class Naveen {
 
     void solve(PrintWriter out) {
       
-List<Integer> list = new ArrayList<>();
+List<Integer> list = new ArrayList();
 
+for(int i =0;i<n;i++){
+    list.add(arr[i]);  
+}
 
-       for(int i =0;i<n;i++,i++){
-           list.add(arr[i+1]);
-       }
-       out.println(list);
+Collections.sort(list);
+List<Integer> res = new ArrayList<>();
+res.add(list.get(n-1));
+       
+list.remove(n-1);
+int gcd = res.get(0);
+while(!list.isEmpty()){
+    int index = 0;
+    int g = My.gcd(gcd,list.get(0));
+    for(int i =1;i<list.size();i++){
+        int ans = My.gcd(gcd,list.get(i));
+        if(ans>g){
+            g=ans;
+            index =i;
+        }
+    }
+    res.add(list.get(index));
+    list.remove(index);
+    gcd = g;
+}
+
+for(int l:res){
+    System.out.print(l+" ");
+}
+out.println();
+    
+
     }
 
    
@@ -192,6 +218,11 @@ class FastScanner {
 }
 
 class My {
+
+    public static int gcd(int a,int b){
+        if(b==0) return a;
+        return gcd(b,a%b);
+        }
 
   public static long lower(long arr[],long key){
         int low = 0;
