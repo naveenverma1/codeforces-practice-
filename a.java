@@ -22,17 +22,25 @@ public class Main {
 class Naveen {
 
     int n;
-    //int[]  arr;
+    int[]  arr;
     
 
     Naveen(FastScanner sc) {
     
          n = sc.nextInt();
+         for(int i =0;i<101;i++){
+            arr[sc.nextInt()]++;
+         }
        //  arr = sc.arrayInt(n);
     }
 
     void solve(PrintWriter out) {
-      
+        int a=0,b=0;
+        while(arr[a]>0)
+              --arr[a++];
+        while(arr[b]>0)
+              --arr[b++];
+        System.out.println(a+b);
 
 
        
