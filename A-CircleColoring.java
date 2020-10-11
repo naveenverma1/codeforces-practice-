@@ -37,8 +37,35 @@ class Naveen {
     }
 
     void solve(PrintWriter out) {
-      
+        int ans[]=new int[n];
         
+        ans[0]=a[0];
+        for(int i=1;i<n;i++)
+    {
+        if(i!=n-1)
+        {
+        if(a[i]!=ans[i-1])
+        ans[i]=a[i];
+        if(b[i]!=ans[i-1])
+        ans[i]=b[i];
+        if(c[i]!=ans[i-1])
+        ans[i]=c[i];
+        }
+        else
+        {
+        if(a[i]!=ans[i-1]&&a[i]!=ans[0])
+        ans[i]=a[i];
+        if(b[i]!=ans[i-1]&&b[i]!=ans[0])
+        ans[i]=b[i];
+        if(c[i]!=ans[i-1]&&c[i]!=ans[0])
+        ans[i]=c[i];
+        }
+    }
+            System.out.println();
+    for(int i=0;i<n;i++)
+    {
+        System.out.print(ans[i]+" ");
+    }
 
        
     }
