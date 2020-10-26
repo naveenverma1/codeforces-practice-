@@ -30,7 +30,7 @@ class Naveen {
          n = sc.nextInt();
        //  arr = sc.arrayInt(n);
     }
-
+    
     void solve(PrintWriter out) {
       
         for (int i = 0; i < n; i++) {
